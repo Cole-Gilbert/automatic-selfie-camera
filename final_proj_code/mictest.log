@@ -1,0 +1,55 @@
+Recording WAVE 'output.wav' : Signed 32 bit Little Endian, Rate 44100 Hz, Mono
+Plug PCM: Route conversion PCM (sformat=S32_LE)
+  Transformation table:
+    0 <- 0*0.5 + 1*0.5
+Its setup is:
+  stream       : CAPTURE
+  access       : RW_INTERLEAVED
+  format       : S32_LE
+  subformat    : STD
+  channels     : 1
+  rate         : 44100
+  exact rate   : 44100 (44100/1)
+  msbits       : 32
+  buffer_size  : 22052
+  period_size  : 5513
+  period_time  : 125011
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 5513
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 22052
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 1445199872
+Slave: Hardware PCM card 1 'snd_rpi_i2s_card' device 0 subdevice 0
+Its setup is:
+  stream       : CAPTURE
+  access       : MMAP_INTERLEAVED
+  format       : S32_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 44100
+  exact rate   : 44100 (44100/1)
+  msbits       : 32
+  buffer_size  : 22052
+  period_size  : 5513
+  period_time  : 125011
+  tstamp_mode  : NONE
+  tstamp_type  : MONOTONIC
+  period_step  : 1
+  avail_min    : 5513
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 22052
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 1445199872
+  appl_ptr     : 0
+  hw_ptr       : 0
+####+                                              | 07%##+                                                | 03%# +                                                | 03%# +                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 02%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%##+                                                | 03%FFT values: [4.86928086e+07 4.28010872e+06 4.05602435e+06 ... 4.32559622e+02
+ 4.27981305e+02 4.29732134e+02]
+0
+Dominant frequency: 0.0 Hz

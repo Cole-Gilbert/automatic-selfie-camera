@@ -1,0 +1,47 @@
+import os
+import RPi.GPIO as GPIO
+import time
+import subprocess
+
+start_time = time.time()
+has_quit = False
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(27, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+def send_command(command):
+	cmd = 'echo "' + command + '" > /home/pi/video_fifo'
+	subprocess.check_output(cmd, shell=True)
+
+
+print("VIDEO FIFO Test")
+while not has_quit:
+	#print ("current time " + str(time.time()))
+	#print ("start time " + str(start_time))
+	time.sleep(0.2)
+	if ( not GPIO.input(17) ):
+		print("pause")
+		send_command("pause")
+	elif ( not GPIO.input(22)  ):
+		print("quit")
+		send_command("q")
+		has_quit = True
+	elif ( not GPIO.input(23) ):
+		print("forward 10")
+		send_command("seek 10")
+	elif ( not GPIO.input(27) ):
+		print("back 10")
+		send_command("seek -10")
+	elif ( not GPIO.input(16) ):
+		print("forward 30")
+		send_command("seek 30")
+	elif ( not GPIO.input(26) ):
+		print("back 30")
+		send_command("seek -30")
+GPIO.cleanup()
+print("Done")
